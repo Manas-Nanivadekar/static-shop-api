@@ -1,0 +1,14 @@
+name: My Custom Action
+
+# The 'on' key defines what triggers the action. 
+# 'push' means it will run every time you push code to the repository.
+# You can also use 'workflow_dispatch' if you want to trigger it manually.
+on: [push] 
+
+jobs:
+  test:
+    # 'runs-on' is required. It tells GitHub to run this on a standard Ubuntu Linux virtual machine.
+    runs-on: ubuntu-latest 
+    steps:
+      - name: 23f1002313@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
