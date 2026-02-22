@@ -168,4 +168,39 @@
       "id": "prod-fbfcb74e-021",
       "name": "Pro Item 21",
       "category": "home",
-      "price":
+      "price": 267.08,
+      "stock": 100,
+      "rating": 2.3
+    },
+    {
+      "id": "prod-fbfcb74e-022",
+      "name": "Pro Item 22",
+      "category": "home",
+      "price": 265.78,
+      "stock": 114,
+      "rating": 3.8
+    }
+  ],
+  "aggregations": {
+    "home": {
+      "count": 7,
+      "inventoryValue": 161443.48
+    },
+    "books": {
+      "count": 3,
+      "inventoryValue": 80613.13
+    },
+    "clothing": {
+      "count": 11,
+      "inventoryValue": 307616.25
+    },
+    "sports": {
+      "count": 1,
+      "inventoryValue": 66444.70
+    },
+    "electronics": {
+      "count": 0,
+      "inventoryValue": 0.00
+    }
+  }
+}
