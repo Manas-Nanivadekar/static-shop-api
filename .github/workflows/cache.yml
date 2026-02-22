@@ -1,0 +1,31 @@
+name: CI with Caching
+
+on: 
+  push:
+  workflow_dispatch: # Allows you to run it manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 1. Create a dummy directory/file so the cache has something to actually save
+      - name: Create dummy dependencies
+        run: |
+          mkdir -p my-dependencies
+          echo "Sample dependency data" > my-dependencies/data.txt
+
+      # 2. Use the cache action with your required key
+      - name: Cache dependencies
+        id: my-cache
+        uses: actions/cache@v4
+        with:
+          path: my-dependencies
+          key: cache-9720087
+
+      # 3. The exact step name and echo required by your prompt
+      - name: prime-cache-9720087
+        run: echo "Cache hit result - ${{ steps.my-cache.outputs.cache-hit }}"
